@@ -4,3 +4,54 @@ CSS for the Project 4, Problem 2 States component
 Since CSS uses a global name space for classes we should use names starting with
 states- here.
 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Center the content and give it a max width */
+.content-container {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.content-container h2, .content-container p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Center the input field */
+.content-container input {
+    display: block;
+    margin: 10px auto;
+}
+
+/* Change the color to blue */
+.content-container h2 {
+    color: cornflowerblue;
+}
+
+/* Style the list */
+.content-container ul {
+    list-style: none;
+    display: flex;
+    /* Center the list items horizontally */
+    justify-content: center;
+    /* Wrap the list items */
+    flex-wrap: wrap;
+}
+
+/* Display list items in a block and in the center */
+.content-container li {
+    /* Horizontal margins */
+    margin: 0 10px;
+}
+
+/* Change the color of the list item when hovered over and cursor */
+.content-container li:hover {
+    color: cornflowerblue;
+    cursor: pointer;
+}
