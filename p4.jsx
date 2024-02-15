@@ -5,11 +5,12 @@ import ReactDOM from 'react-dom';
 import Example from './components/example/Example';
 import States from './components/states/States';
 import Header from './components/header/Header';
+import './styles/main.css';
 
 // Define the Main component
 function Main() {
     // State is used to keep track of the current view
-    const [curView, setCurView] = React.useState('example');
+    const [curView, setCurView] = React.useState('Example');
 
     // Function to switch the views
     const switchView = () => {
