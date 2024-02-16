@@ -7,31 +7,25 @@ import Example from './components/example/Example';
 import States from './components/states/States';
 import Header from './components/header/Header';
 import './styles/main.css';
+import './styles/toolbar.css';
 
 // Define the Main component
 function Main() {
-    // State is used to keep track of the current view
-    const [curView, setCurView] = React.useState('Example');
-
-    // Function to switch the views
-    const switchView = () => {
-        setCurView(curView === 'Example' ? 'States' : 'Example');
-    };
-
-    const buttonText = curView === 'Example' ? 'Switch to States' : 'Switch to Example';
-
-    // Rendering the Header and the current view
     return (
-        <>
+        <HashRouter>
             <Header />
-            <button onClick={switchView}>{buttonText}</button>
-            {curView === 'Example' ? <Example /> : <States />}
-        </>
+            <div className="toolbar">
+                <button className="tool-button"><Link to="/example">Example</Link></button>
+                <button className="tool-button"><Link to="/states">States</Link></button>
+            </div>
+            <Route path="/example" component={Example}/>
+            <Route path="/states" component={States}/>
+        </HashRouter>
     );
 }
 
 // Render the Main component into our DOM
 ReactDOM.render(
-    <Main />,
+    <Main/>,
     document.getElementById('reactapp'),
 );
