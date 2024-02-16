@@ -1,6 +1,6 @@
-import { HashRouter, Route, Link } from "react-router-dom"
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { HashRouter, Route, Link } from "react-router-dom";
 
 // Import necessary components
 import Example from './components/example/Example';
