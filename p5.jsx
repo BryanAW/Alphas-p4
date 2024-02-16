@@ -7,7 +7,6 @@ import Example from './components/example/Example';
 import States from './components/states/States';
 import Header from './components/header/Header';
 import './styles/main.css';
-import './styles/toolbar.css';
 
 // Define the Main component
 function Main() {
